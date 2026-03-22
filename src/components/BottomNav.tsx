@@ -1,4 +1,4 @@
-import { Home, User } from "lucide-react";
+import { ArrowUpRight, Code, Home, User } from "lucide-react";
 import { NavLink } from "react-router";
 
 export default function BottomNav() {
@@ -22,6 +22,18 @@ export default function BottomNav() {
 				<User size={20} />
 				About
 			</NavLink>
+			<a
+				href="https://api.nacal.io/graphql"
+				target="_blank"
+				rel="noopener noreferrer"
+				className="flex flex-col items-center gap-1 text-xs text-gray-500 transition hover:text-gray-300"
+			>
+				<Code size={20} />
+				<span className="flex items-center gap-0.5">
+					API
+					<ArrowUpRight size={10} />
+				</span>
+			</a>
 		</nav>
 	);
 }
