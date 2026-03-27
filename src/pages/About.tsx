@@ -1,4 +1,4 @@
-import ProfileCard from "../components/ProfileCard";
+import ProfileCard from "../components/ProfileCard"
 
 export default function About() {
   return (
@@ -42,5 +42,5 @@ export default function About() {
         </p>
       </div>
     </div>
-  );
+  )
 }

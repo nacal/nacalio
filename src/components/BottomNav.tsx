@@ -1,5 +1,5 @@
-import { ArrowUpRight, Code, Home, User } from "lucide-react";
-import { NavLink } from "react-router";
+import { ArrowUpRight, Code, Home, User } from "lucide-react"
+import { NavLink } from "react-router"
 
 export default function BottomNav() {
   return (
@@ -35,5 +35,5 @@ export default function BottomNav() {
         </span>
       </a>
     </nav>
-  );
+  )
 }

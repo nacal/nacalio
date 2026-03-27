@@ -1,26 +1,26 @@
-import { Pause, Play } from "lucide-react";
-import { useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router";
-import BottomNav from "./components/BottomNav";
-import DecryptedText from "./components/DecryptedText";
-import Dither from "./components/Dither";
-import About from "./pages/About";
+import { Pause, Play } from "lucide-react"
+import { useEffect, useState } from "react"
+import { BrowserRouter, Route, Routes, useLocation } from "react-router"
+import BottomNav from "./components/BottomNav"
+import DecryptedText from "./components/DecryptedText"
+import Dither from "./components/Dither"
+import About from "./pages/About"
 
 function Layout() {
-  const [paused, setPaused] = useState(false);
-  const location = useLocation();
-  const isHome = location.pathname === "/";
-  const [visible, setVisible] = useState(true);
-  const [showHome, setShowHome] = useState(isHome);
+  const [paused, setPaused] = useState(false)
+  const location = useLocation()
+  const isHome = location.pathname === "/"
+  const [visible, setVisible] = useState(true)
+  const [showHome, setShowHome] = useState(isHome)
 
   useEffect(() => {
-    setVisible(false);
+    setVisible(false)
     const timer = setTimeout(() => {
-      setShowHome(isHome);
-      setVisible(true);
-    }, 200);
-    return () => clearTimeout(timer);
-  }, [isHome]);
+      setShowHome(isHome)
+      setVisible(true)
+    }, 200)
+    return () => clearTimeout(timer)
+  }, [isHome])
 
   return (
     <div className="relative min-h-screen bg-gray-950 text-gray-100">
@@ -79,14 +79,14 @@ function Layout() {
 
       <button
         type="button"
-        onClick={() => setPaused((p) => !p)}
+        onClick={() => setPaused(p => !p)}
         aria-label={paused ? "Play animation" : "Pause animation"}
         className="fixed bottom-6 right-6 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-gray-900/80 text-gray-300 backdrop-blur transition hover:bg-gray-800"
       >
         {paused ? <Play size={16} /> : <Pause size={16} />}
       </button>
     </div>
-  );
+  )
 }
 
 function App() {
@@ -94,7 +94,7 @@ function App() {
     <BrowserRouter>
       <Layout />
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App
