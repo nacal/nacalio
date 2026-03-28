@@ -40,6 +40,14 @@ export default function About() {
             clear, intuitive information architecture and UI design.
           </span>
         </p>
+        <p className="mt-6">
+          <a
+            href="mailto:contact@nacal.io"
+            className="bg-black px-2 py-1 text-gray-300 transition hover:text-white"
+          >
+            contact@nacal.io
+          </a>
+        </p>
       </div>
     </div>
   )
